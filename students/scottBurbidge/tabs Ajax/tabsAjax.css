@@ -9,7 +9,7 @@ body{
 }
 .info{
   width: inherit;
-  height: 600px;
+  height: 550px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -43,7 +43,7 @@ h2{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-color: #B4B6B6
+  background-color: #B4B6B6;
 }
 
 .tabBar{
@@ -101,9 +101,11 @@ h2{
 
 .txt{
   position: relative;
-  top: 30%;
+  top: 10%;
   width: 80%;
   margin: auto;
+  overflow-x: hidden;
+  height: 80%
 }
 
 
