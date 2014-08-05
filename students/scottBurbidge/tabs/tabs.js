@@ -7,8 +7,28 @@ function lastImage(){
   $(this).removeClass("image").addClass("noImage") 
 }
 
+function ageList(){
+  var lowEnd = 0;
+  var highEnd = 99;
+  var ageArr = [];
+  while(lowEnd <= highEnd){
+     ageArr.push(lowEnd++);
+  };
+return ageArr
+};
+
 
 $(document).ready(function(){
+
+  var age  = ageList();
+  var aList = $('select');
+  $.each(age, function(i){
+  $('<option></option>')
+      .val([i + 1])
+      .text([i + 1])
+      .appendTo(aList);
+  });
+
   $(".tab").click(function(){
     var wind = $(this).val()
     $(".pane").addClass("paneGone").removeClass("paneSelect")

@@ -1,0 +1,33 @@
+<!doctype html/>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular.min.js"></script>
+    <script src="ng.js"></script>
+    <link rel="stylesheet" href="angulartabs.css">
+  </head>
+  <body>
+    <div class="page">
+      <h2>
+        This is header
+      </h2>
+      <div class="container">
+        <div ng-controller="NgTabsCtrl">
+          <div class="slow" ng-show="tabs.length === 0">
+            Loading...
+          </div>
+          <ul ng-show="tabs.length > 0">
+              <li ng-repeat="tab in tabs">
+                <div class="tabButton" ng-class="{active: tab.name === activeTab.name}">
+                  <a class="tab-link" href="#" ng-click="showTab(tab)">{{tab.name}}</a>
+                  <div class="hidden">{{tab.content}}</div>
+                </div>
+              </li>
+            <div class="activeContent">
+              {{activeTab.content}}
+            </div>
+          </ul>
+        </div>
+      </div> 
+    </div>
+  </body>
+</html>
